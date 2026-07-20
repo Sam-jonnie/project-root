@@ -1,0 +1,339 @@
+.dashboard-layout {
+    width: 95%;
+    max-width: 1400px;
+    margin: 1.5rem auto;
+    align-self: flex-start;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dash-header h1 {
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.badge {
+    font-size: 0.75rem;
+    background: #f43f5e;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    color: white;
+    vertical-align: middle;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: rgba(244, 63, 94, 0.2);
+    border-color: #f43f5e;
+}
+
+.dashboard-content-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1.25rem;
+}
+
+.panel h3,
+.kanban-wrapper h3 {
+    margin-top: 0;
+    color: #38bdf8;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.action-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.action-row input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.action-row button {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+}
+
+.delete-btn {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid #ef4444;
+    color: #fca5a5;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: #ef4444;
+    color: white;
+}
+
+.kanban-wrapper {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 1.25rem;
+}
+
+.kanban-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.kanban-column {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 0.85rem;
+    min-height: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.column-title {
+    margin: 0 0 0.85rem 0;
+    padding: 0.4rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.pending-header {
+    background: rgba(234, 179, 8, 0.1);
+    color: #facc15;
+}
+
+.in-progress-header {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+}
+
+.completed-header {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.kanban-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.kanban-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.kanban-card h5 {
+    margin: 0 0 0.6rem 0;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.card-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-controls select {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+}
+
+.priority-tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.priority-tag.High {
+    background: #ef4444;
+    color: white;
+}
+
+.priority-tag.Medium {
+    background: #f59e0b;
+    color: black;
+}
+
+.priority-tag.Low {
+    background: #10b981;
+    color: white;
+}
+
+/* Sliding Overlay Comments Sidebar Drawer */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+.comment-drawer {
+    width: 400px;
+    height: 100%;
+    background: #0f1322;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.drawer-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #c084fc;
+}
+
+.drawer-header button {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.feed-scroll {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+.comment-bubble {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-stamp {
+    font-size: 0.7rem;
+    color: #38bdf8;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.comment-bubble p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.drawer-input-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.drawer-input-row input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.75rem;
+    color: white;
+    border-radius: 8px;
+}
+
+.drawer-input-row button {
+    background: #9333ea;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.empty {
+    color: #64748b;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 2rem;
+}
